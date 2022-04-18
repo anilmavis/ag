@@ -1,7 +1,8 @@
 # ag
 networking library
 ## server
-`ServerEndpoint endpoint = new ServerEndpoint(8080);
+```java
+ServerEndpoint endpoint = new ServerEndpoint(8080);
 endpoint.setOnOpen((session) -> {
     System.out.println("opened");
 });
@@ -11,10 +12,13 @@ endpoint.setOnMessage((session, message) -> {
 endpoint.setOnClose((session) -> {
     System.out.println("closed");
 });
-endpoint.open();`
+endpoint.open();
+```
 ## client
-`ClientEndpoint endpoint = new ClientEndpoint(8080);
+```java
+ClientEndpoint endpoint = new ClientEndpoint(8080);
 endpoint.open();
 Message message = new Message("hello", "world");
 endpoint.send(message);
-endpoint.close();`
+endpoint.close();
+```
