@@ -16,7 +16,7 @@ endpoint.open();
 ```
 ## client
 ```java
-ClientEndpoint endpoint = new ClientEndpoint(8080);
+ClientEndpoint endpoint = new ClientEndpoint("127.0.0.1", 8080);
 endpoint.open();
 Message message = new Message("hello", "world");
 endpoint.send(message);
